@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>美容講師 × 醫美協作｜完整課程與面試準備</title>
+<style>
+:root{
+  --bg:#f5f6f8; --panel:#ffffff; --panel2:#f9fafb; --text:#111318; --muted:#667085;
+  --border:#dfe3e8; --accent:#20242b; --accentSoft:#eceff3;
+  --green:#e9f7ef; --greenText:#17623a; --amber:#fff6da; --amberText:#805b00;
+  --red:#fdeaea; --redText:#8b2525; --blue:#eaf1ff; --blueText:#294f9b;
+  --shadow:0 10px 30px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0f1115; --panel:#171a20; --panel2:#12151a; --text:#f2f4f7; --muted:#98a2b3;
+    --border:#2b3038; --accent:#f2f4f7; --accentSoft:#242933;
+    --green:#183424; --greenText:#9ce6b8; --amber:#352c13; --amberText:#f4d77b;
+    --red:#391b1b; --redText:#ffb1b1; --blue:#17233c; --blueText:#a7c5ff;
+    --shadow:none;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.7;
+}
+button,input{font:inherit}
+a{color:inherit}
+.wrap{max-width:1180px;margin:auto;padding:24px}
+.top{
+  display:grid;grid-template-columns:1.35fr .65fr;gap:16px;
+}
+.card{
+  background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:22px;box-shadow:var(--shadow);
+}
+.eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700}
+h1{font-size:clamp(28px,4vw,48px);line-height:1.12;margin:8px 0 14px;letter-spacing:-.025em}
+h2{font-size:24px;line-height:1.3;margin:0 0 10px}
+h3{font-size:18px;margin:0 0 8px}
+p{margin:8px 0}
+.muted{color:var(--muted)}
+.kicker{font-size:18px}
+.toolbar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:20px 0 10px
+}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab, .chip, .module-btn, .action{
+  border:1px solid var(--border);background:var(--panel);color:var(--text);cursor:pointer;border-radius:999px;padding:10px 14px;
+}
+.tab.active,.chip.active,.module-btn.active,.action.primary{
+  border-color:var(--accent);background:var(--accentSoft);font-weight:700
+}
+.action{min-height:44px}
+.section{display:none;margin-top:18px}
+.section.active{display:block}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.badge{display:inline-block;padding:4px 9px;border-radius:999px;font-size:12px;font-weight:700}
+.green{background:var(--green);color:var(--greenText)}
+.amber{background:var(--amber);color:var(--amberText)}
+.red{background:var(--red);color:var(--redText)}
+.blue{background:var(--blue);color:var(--blueText)}
+.level{
+  border:1px solid var(--border);border-radius:16px;padding:16px;background:var(--panel2)
+}
+.level p{font-size:14px;color:var(--muted)}
+.flow{
+  display:grid;grid-template-columns:repeat(7,1fr);gap:8px;align-items:stretch;margin-top:14px
+}
+.flow .node{
+  min-height:86px;border:1px solid var(--border);border-radius:14px;padding:12px;background:var(--panel2);
+  display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;font-weight:700
+}
+.notice{border-left:4px solid var(--accent);padding:12px 14px;background:var(--panel2);border-radius:0 12px 12px 0;margin:14px 0}
+.matrixWrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}
+.moduleList{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.module-btn{border-radius:14px;text-align:left;padding:14px;min-height:88px}
+.module-btn strong{display:block}
+.module-btn small{display:block;color:var(--muted);margin-top:5px}
+.detail ul{margin:6px 0 0;padding-left:20px}
+.detail li{margin:4px 0}
+.tableWrap{overflow:auto;border:1px solid var(--border);border-radius:16px}
+table{width:100%;border-collapse:collapse;min-width:760px;background:var(--panel)}
+th,td{padding:12px 13px;border-bottom:1px solid var(--border);vertical-align:top;text-align:left}
+th{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel2)}
+tr:last-child td{border-bottom:none}
+.courseHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.course{margin-bottom:12px}
+.course summary{
+  list-style:none;cursor:pointer;padding:16px 18px;border:1px solid var(--border);border-radius:16px;background:var(--panel);
+  display:flex;justify-content:space-between;gap:14px;align-items:center
+}
+.course summary::-webkit-details-marker{display:none}
+.course[open] summary{border-radius:16px 16px 0 0;background:var(--accentSoft)}
+.courseBody{border:1px solid var(--border);border-top:0;border-radius:0 0 16px 16px;padding:18px;background:var(--panel)}
+.courseGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.course ul{margin:8px 0;padding-left:20px}
+.hours{
+  display:grid;grid-template-columns:repeat(9,1fr);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:14px
+}
+.hour{min-height:70px;padding:10px 6px;text-align:center;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--border);font-size:12px;background:var(--panel2)}
+.hour:last-child{border-right:0}
+.hour b{font-size:17px}
+.checklist label{
+  display:flex;gap:10px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--border)
+}
+.checklist label:last-child{border-bottom:none}
+.checklist input{margin-top:6px;transform:scale(1.2)}
+.script{
+  border:1px solid var(--border);border-radius:16px;padding:16px;background:var(--panel2)
+}
+.script strong{display:block;margin-bottom:7px}
+.source{font-size:13px}
+.source a{text-decoration:underline;text-underline-offset:3px}
+.search{width:min(100%,460px);border:1px solid var(--border);background:var(--panel);color:var(--text);border-radius:999px;padding:11px 14px}
+.hide{display:none!important}
+.footer{margin:24px 0 8px;color:var(--muted);font-size:12px}
+@media(max-width:850px){
+  .top,.grid3,.grid2,.matrixWrap,.courseGrid{grid-template-columns:1fr}
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .hours{grid-template-columns:repeat(3,1fr)}
+  .hour{border-bottom:1px solid var(--border)}
+}
+@media(max-width:520px){
+  .wrap{padding:14px}
+  .card{padding:17px;border-radius:16px}
+  .moduleList{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr}
+  .hours{grid-template-columns:1fr}
+  .toolbar{align-items:stretch}
+  .tabs{display:grid;grid-template-columns:1fr 1fr}
+  .tab{text-align:center}
+}
+@media print{
+  body{background:white;color:black}
+  .toolbar,.noPrint{display:none!important}
+  .section{display:block!important}
+  .card{box-shadow:none;break-inside:avoid}
+  details{break-inside:avoid}
+  details .courseBody{display:block!important}
+  details:not([open]) .courseBody{display:block!important}
+  .wrap{max-width:none;padding:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="top">
+  <div class="card">
+    <div class="eyebrow">美時診所｜美容講師面試準備</div>
+    <h1>美容技術 × 美容醫學協作<br>完整教育訓練系統</h1>
+    <p class="kicker">目的不是「會做很多療程」，而是建立一套 <strong>可複製、可考核、權責清楚、安全可管理</strong> 的教育制度。</p>
+    <p class="muted">適用內容：臉部保養、按摩、非侵入式美容儀器、MTS／微針知識、皮秒、水光針、音波、術前後照護、顧客溝通、衛生與考核。</p>
+  </div>
+  <div class="card">
+    <div class="eyebrow">先記住這 3 句</div>
+    <p><strong>1｜美容實作</strong><br><span class="muted">教到「會做、會標準化、會考核」。</span></p>
+    <p><strong>2｜醫美協作</strong><br><span class="muted">教「原理、流程、照護、溝通、轉介」。</span></p>
+    <p><strong>3｜醫療處置</strong><br><span class="muted">不碰「診斷、醫療參數、實際施作」。</span></p>
+  </div>
+</section>
+
+<div class="toolbar">
+  <div class="tabs" role="tablist" aria-label="內容分頁">
+    <button class="tab active" data-tab="overview">快速總覽</button>
+    <button class="tab" data-tab="role">職務定位</button>
+    <button class="tab" data-tab="matrix">權限矩陣</button>
+    <button class="tab" data-tab="courses">完整課程</button>
+    <button class="tab" data-tab="interview">面試準備</button>
+    <button class="tab" data-tab="law">法規邊界</button>
+  </div>
+  <div class="noPrint">
+    <button class="action" id="printBtn">列印／另存 PDF</button>
+  </div>
+</div>
+
+<section class="section active" id="overview">
+  <div class="grid3">
+    <div class="level">
+      <span class="badge green">L1｜美容實作</span>
+      <h3>美容講師可主導</h3>
+      <p>臉部保養、按摩、清潔、保濕、一般美容服務流程、非侵入式設備的合法操作、安全與考核。</p>
+    </div>
+    <div class="level">
+      <span class="badge amber">L2｜醫美協作</span>
+      <h3>可教知識與流程</h3>
+      <p>醫美療程原理、顧客旅程、術前準備、術後照護、異常辨識、醫療端轉介與服務溝通。</p>
+    </div>
+    <div class="level">
+      <span class="badge red">L3｜醫療專業</span>
+      <h3>不應越權</h3>
+      <p>疾病診斷、醫療適應症判斷、醫療設備參數、雷射施打、針劑注射、醫療音波實際處置等。</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h2>建議的完整顧客旅程</h2>
+    <div class="flow">
+      <div class="node">需求詢問</div>
+      <div class="node">美容端膚況觀察</div>
+      <div class="node">必要時轉介醫師</div>
+      <div class="node">醫療處置／美容服務</div>
+      <div class="node">術後美容照護</div>
+      <div class="node">居家保養</div>
+      <div class="node">追蹤與回診轉介</div>
+    </div>
+    <div class="notice"><strong>課程設計重點：</strong>把「技術」放在顧客旅程裡，而不是單獨教一台機器。這樣更接近診所真正需要的管理能力。</div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h2>建議訓練系統</h2>
+    <div class="grid3">
+      <div><span class="badge blue">Stage 1</span><h3>新人核心班｜24H</h3><p class="muted">建立皮膚基礎、美容實作、醫美知識、衛生與考核。</p></div>
+      <div><span class="badge blue">Stage 2</span><h3>進階協作班｜12H</h3><p class="muted">加深醫美療程理解、術前後照護、客訴與案例討論。</p></div>
+      <div><span class="badge blue">Stage 3</span><h3>內部講師班｜8H</h3><p class="muted">學會示範、教案設計、評核一致性與新人帶教。</p></div>
+    </div>
+    <p><strong>完整系統共 44H</strong>，面試時可先提出 24H 核心班作為 MVP，再依公司需求延伸。</p>
+  </div>
+</section>
+
+<section class="section" id="role">
+  <div class="card">
+    <h2>美容講師的最佳職務定位</h2>
+    <div class="grid3">
+      <div class="level"><h3>A｜技術標準化</h3><p>把資深美容師的個人經驗轉成 SOP、操作節點、時間、品質標準、禁忌、清消規範及考核表。</p></div>
+      <div class="level"><h3>B｜教育訓練</h3><p>設計新人訓練、複訓、進階訓練、示範、真人實作、案例討論與通過標準。</p></div>
+      <div class="level"><h3>C｜醫美協作</h3><p>讓美容端理解醫療療程，但清楚知道何時要停止美容判斷並交給醫療專業。</p></div>
+      <div class="level"><h3>D｜品質管理</h3><p>建立客戶紀錄、清潔消毒、設備點檢、耗材、服務一致性及異常事件回報。</p></div>
+      <div class="level"><h3>E｜顧客體驗</h3><p>統一諮詢用語、療程說明、居家保養、追蹤節點、客訴與醫療轉介方式。</p></div>
+      <div class="level"><h3>F｜跨部門協作</h3><p>與醫師、護理、美容、諮詢、客服共同維護同一套療程資訊與權限界線。</p></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h2>她在面試中應該呈現的價值</h2>
+    <div class="tableWrap">
+      <table>
+        <thead><tr><th>不要只呈現</th><th>應升級成</th><th>公司得到的價值</th></tr></thead>
+        <tbody>
+          <tr><td>我會做臉</td><td>我能把做臉流程標準化</td><td>新人容易複製、品質一致</td></tr>
+          <tr><td>我會教手法</td><td>我能建立示範＋練習＋考核制度</td><td>降低「每個老師教法不同」</td></tr>
+          <tr><td>我懂醫美</td><td>我能建立美容與醫療的協作界線</td><td>降低越權與客戶安全風險</td></tr>
+          <tr><td>我服務客人很多年</td><td>我能整理顧客旅程與異常轉介節點</td><td>提高服務一致性與追蹤品質</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="matrix">
+  <div class="card">
+    <h2>療程權限互動矩陣</h2>
+    <p class="muted">點左側項目查看：可以教什麼、需要什麼界線、課程應怎麼命名。</p>
+    <div class="matrixWrap">
+      <div class="moduleList">
+        <button class="module-btn active" data-module="facial"><strong>臉部保養</strong><small>L1｜完整實作</small></button>
+        <button class="module-btn" data-module="massage"><strong>臉部／頸肩按摩</strong><small>L1｜完整實作</small></button>
+        <button class="module-btn" data-module="device"><strong>美容儀器導入</strong><small>L1｜依設備核准用途</small></button>
+        <button class="module-btn" data-module="mts"><strong>MTS／微針</strong><small>L2｜邊界需逐設備確認</small></button>
+        <button class="module-btn" data-module="pico"><strong>皮秒雷射</strong><small>L2 → L3｜醫療光電</small></button>
+        <button class="module-btn" data-module="skinbooster"><strong>水光針</strong><small>L2 → L3｜涉及注射即醫療</small></button>
+        <button class="module-btn" data-module="hifu"><strong>音波拉提</strong><small>L2 → L3｜醫療光電</small></button>
+        <button class="module-btn" data-module="aftercare"><strong>術前後美容照護</strong><small>L2｜非常適合美容講師主導</small></button>
+      </div>
+      <div class="card detail" id="detailCard">
+        <span class="badge green" id="detailLevel">L1｜美容實作</span>
+        <h2 id="detailTitle" style="margin-top:12px">臉部保養</h2>
+        <p id="detailSummary" class="muted"></p>
+        <div class="grid2">
+          <div><h3>可以教</h3><ul id="detailCan"></ul></div>
+          <div><h3>不要越線</h3><ul id="detailNo"></ul></div>
+        </div>
+        <div class="notice"><strong>建議課程名稱：</strong><span id="detailCourse"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h2>一張表看懂全部</h2>
+    <div class="tableWrap">
+      <table>
+        <thead><tr><th>項目</th><th>美容講師實作教學</th><th>知識／協作教學</th><th>醫療操作</th><th>主要提醒</th></tr></thead>
+        <tbody>
+          <tr><td>臉部保養</td><td>✅ 可</td><td>✅ 可</td><td>－</td><td>避免疾病診斷與治療宣稱</td></tr>
+          <tr><td>按摩</td><td>✅ 可</td><td>✅ 可</td><td>－</td><td>以美容與舒適服務定位</td></tr>
+          <tr><td>一般美容儀器</td><td>✅／⚠️</td><td>✅ 可</td><td>視設備而定</td><td>需查機型、醫療器材屬性與核准用途</td></tr>
+          <tr><td>MTS／微針</td><td>⚠️ 不宜概括</td><td>✅ 可</td><td>依實際設備／侵入性判斷</td><td>若穿刺、RF微針等，風險明顯提高</td></tr>
+          <tr><td>皮秒雷射</td><td>❌</td><td>✅ 可</td><td>🔴 醫療端</td><td>雷射屬特定美容醫學處置</td></tr>
+          <tr><td>水光針</td><td>❌ 注射</td><td>✅ 可</td><td>🔴 醫療端</td><td>涉及皮內／皮下注射即屬醫療處置</td></tr>
+          <tr><td>音波拉提</td><td>❌</td><td>✅ 可</td><td>🔴 醫療端</td><td>超音波屬特定美容醫學處置</td></tr>
+          <tr><td>術前後美容照護</td><td>✅ 可</td><td>✅ 可</td><td>－</td><td>遇到異常反應轉交醫療端</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="courses">
+  <div class="toolbar" style="margin-top:0">
+    <div>
+      <h2>完整課程模組</h2>
+      <p class="muted">可展開每一堂，作為她理解內容、面試說明與之後正式提案的母版。</p>
+    </div>
+    <input class="search" id="courseSearch" type="search" placeholder="搜尋：皮秒、按摩、衛生、顧客…">
+  </div>
+
+  <details class="course" open data-search="皮膚 基礎 結構 膚況 風險 評估">
+    <summary><div><strong>MODULE 01｜皮膚基礎與風險辨識</strong><br><small class="muted">所有課程的共同底層</small></div><span class="badge blue">2H</span></summary>
+    <div class="courseBody">
+      <div class="courseGrid">
+        <div><h3>學習目標</h3><ul><li>理解表皮、真皮、皮脂膜與屏障的基本概念</li><li>能做「美容膚況觀察」，而不是醫療診斷</li><li>辨識不適合立即美容操作的情況並轉介</li><li>建立顧客紀錄與服務前確認習慣</li></ul></div>
+        <div><h3>內容</h3><ul><li>乾性、油性、混合、敏弱等膚況觀察</li><li>角質、保濕、屏障、皮脂基本概念</li><li>常見紅、腫、破皮、感染疑慮等停止服務條件</li><li>美容可處理／應交醫療端的界線</li></ul></div>
+      </div>
+      <p><strong>考核：</strong>案例判讀＋服務前詢問演練。</p>
+    </div>
+  </details>
+
+  <details class="course" data-search="臉部 保養 清潔 卸妝 面膜 保濕 防曬">
+    <summary><div><strong>MODULE 02｜臉部保養標準流程</strong><br><small class="muted">美容端主力實作課</small></div><span class="badge green">4H</span></summary>
+    <div class="courseBody">
+      <div class="courseGrid">
+        <div><h3>標準流程</h3><ul><li>接待與需求確認</li><li>卸妝與清潔</li><li>美容膚況觀察</li><li>基礎角質／保養程序</li><li>按摩／導入／面膜</li><li>保濕、防護、居家保養</li><li>紀錄與追蹤</li></ul></div>
+        <div><h3>教學重點</h3><ul><li>產品使用量與順序</li><li>手部衛生與器具清潔</li><li>不同膚況的流程調整原則</li><li>服務時間與品質一致性</li><li>不使用醫療診斷或保證療效語言</li></ul></div>
+      </div>
+      <p><strong>教學法：</strong>老師完整示範 → 分段練習 → 學員完整流程 → 真人考核。</p>
+    </div>
+  </details>
+
+  <details class="course" data-search="按摩 臉部 頸肩 手技 力道 節奏 人體工學">
+    <summary><div><strong>MODULE 03｜臉部與頸肩按摩</strong><br><small class="muted">手技、節奏與顧客舒適度</small></div><span class="badge green">4H</span></summary>
+    <div class="courseBody">
+      <div class="courseGrid">
+        <div><h3>技術內容</h3><ul><li>操作區域與基本方向</li><li>手勢銜接與連續性</li><li>力道、節奏與速度控制</li><li>頸肩放鬆與顧客舒適度</li><li>操作者站姿、手腕與肩頸負荷</li></ul></div>
+        <div><h3>考核標準</h3><ul><li>手法正確性</li><li>流程流暢度</li><li>力道一致性</li><li>顧客回饋</li><li>衛生與專業態度</li></ul></div>
+      </div>
+      <p><strong>界線：</strong>定位為美容與舒適服務，不宣稱治療疾病或替代醫療。</p>
+    </div>
+  </details>
+
+  <details class="course" data-search="美容 儀器 導入 超聲波 離子 清潔 消毒 設備">
+    <summary><div><strong>MODULE 04｜美容儀器與非侵入式導入</strong><br><small class="muted">先確認設備，再教操作</small></div><span class="badge amber">3H</span></summary>
+    <div class="courseBody">
+      <div class="courseGrid">
+        <div><h3>理論</h3><ul><li>設備基本作用原理</li><li>產品／介質搭配概念</li><li>適用與不適用狀況</li><li>安全檢查、清潔、消毒與耗材</li></ul></div>
+        <div><h3>實作框架</h3><ul><li>開機前點檢</li><li>顧客狀況確認</li><li>依原廠合法用途操作</li><li>結束後清潔、耗材處理與紀錄</li></ul></div>
+      </div>
+      <div class="notice"><strong>重要：</strong>「美容儀」只是商業名稱，不能用名稱判斷是否任何人都可操作。需要看實際機型、醫療器材屬性、核准用途與診所內部權限。</div>
+    </div>
+  </details>
+
+  <details class="course" data-search="MTS 微針 RF 穿刺 微針 原理 協作 術後">
+    <summary><div><strong>MODULE 05｜MTS／微針原理與醫美協作</strong><br><small class="muted">高風險邊界，不建議寫成純「操作課」</small></div><span class="badge amber">醫美知識</span></summary>
+    <div class="courseBody">
+      <div class="courseGrid">
+        <div><h3>美容講師可教</h3><ul><li>MTS／微針概念與常見名詞</li><li>顧客療程流程</li><li>衛生與感染風險</li><li>服務前後注意事項</li><li>術後美容照護</li><li>異常狀況回報／轉介</li></ul></div>
+        <div><h3>不應自行延伸</h3><ul><li>把所有 MTS 都視為一般美容</li><li>自行教授侵入深度</li><li>醫療參數或 RF 能量設定</li><li>用美容講師資格替代醫療資格判斷</li></ul></div>
+      </div>
+      <p><strong>建議名稱：</strong>「MTS／微針原理、風險與美容醫學協作」。</p>
+    </div>
+  </details>
+
+  <details class="course" data-search="皮秒 雷射 光電 防曬 保濕 術後">
+    <summary><div><strong>MODULE 06｜皮秒雷射基礎知識與術後照護</strong><br><small class="muted">知識可教，醫療操作不越權</small></div><span class="badge red">醫療光電</span></summary>
+    <div class="courseBody">
+      <div class="courseGrid">
+        <div><h3>美容講師可教</h3><ul><li>雷射與皮秒的基礎概念</li><li>顧客從諮詢到術後追蹤的流程</li><li>術前一般保養注意事項</li><li>術後清潔、保濕、防曬的照護概念</li><li>常見正常反應與「需要回醫療端」的辨識</li></ul></div>
+        <div><h3>醫療端</h3><ul><li>醫療適應症與診斷</li><li>波長、能量、發數等醫療參數</li><li>治療區域的醫療判斷</li><li>實際雷射施打</li><li>併發症診治</li></ul></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="course" data-search="水光針 注射 玻尿酸 針劑 術後">
+    <summary><div><strong>MODULE 07｜水光療程知識與美容協作</strong><br><small class="muted">若涉及注射，實際施作屬醫療端</small></div><span class="badge red">針劑醫療</span></summary>
+    <div class="courseBody">
+      <div class="courseGrid">
+        <div><h3>美容講師可教</h3><ul><li>水光療程的市場常見概念與名詞</li><li>顧客流程與術前準備</li><li>術後清潔、保濕、防曬</li><li>顧客追蹤與異常回報</li><li>與護理／醫師交接的標準流程</li></ul></div>
+        <div><h3>醫療端</h3><ul><li>注射點位</li><li>注射深度</li><li>劑量與產品／藥物搭配</li><li>實際注射</li><li>醫療風險判斷與處置</li></ul></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="course" data-search="音波 HIFU 超音波 拉提 探頭 能量">
+    <summary><div><strong>MODULE 08｜音波拉提基礎知識與美容協作</strong><br><small class="muted">超音波醫療處置的顧客理解與照護</small></div><span class="badge red">醫療光電</span></summary>
+    <div class="courseBody">
+      <div class="courseGrid">
+        <div><h3>美容講師可教</h3><ul><li>HIFU／音波的基礎原理概念</li><li>顧客療程旅程</li><li>術前後一般美容照護</li><li>追蹤與服務溝通</li><li>異常反應回醫療端</li></ul></div>
+        <div><h3>醫療端</h3><ul><li>探頭／治療深度選擇</li><li>能量設定</li><li>發數與區域規劃</li><li>治療適應症判斷</li><li>實際音波醫療操作</li></ul></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="course" data-search="術前 術後 照護 雷射 音波 水光 微針 保濕 防曬">
+    <summary><div><strong>MODULE 09｜醫美術前後美容照護</strong><br><small class="muted">最值得她建立成招牌課程</small></div><span class="badge green">2H</span></summary>
+    <div class="courseBody">
+      <div class="courseGrid">
+        <div><h3>核心內容</h3><ul><li>療程前一般保養與資訊確認</li><li>療程後清潔、保濕、防曬原則</li><li>產品使用與暫停項目的基本邏輯</li><li>追蹤時間點與紀錄格式</li></ul></div>
+        <div><h3>轉介機制</h3><ul><li>明顯疼痛、異常腫脹、破皮、感染疑慮等不自行判斷治療</li><li>建立「停止美容處理 → 通知醫療端」SOP</li><li>顧客問題分成美容照護與醫療問題</li></ul></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="course" data-search="顧客 諮詢 銷售 溝通 客訴 醫師 轉介">
+    <summary><div><strong>MODULE 10｜顧客諮詢與專業溝通</strong><br><small class="muted">避免過度承諾，也提高成交品質</small></div><span class="badge blue">1H</span></summary>
+    <div class="courseBody">
+      <ul><li>需求詢問與美容服務說明</li><li>美容與美容醫學的差異說明</li><li>不做醫療診斷、不代替醫師判斷</li><li>不保證效果、不使用絕對化療效話術</li><li>何時轉介醫師／護理端</li><li>客訴接收、紀錄、升級處理</li></ul>
+      <p><strong>練習：</strong>角色扮演：顧客要求「一定要有效」「哪個療程最適合我」「這是不是皮膚病」時如何回應。</p>
+    </div>
+  </details>
+
+  <details class="course" data-search="衛生 消毒 感染 手套 清潔 耗材">
+    <summary><div><strong>MODULE 11｜衛生、消毒與感染控制</strong><br><small class="muted">美容教育不可缺的底線課</small></div><span class="badge blue">2H</span></summary>
+    <div class="courseBody">
+      <ul><li>手部衛生與個人防護</li><li>清潔區／污染區分流</li><li>器具、設備接觸面的清潔消毒</li><li>一次性耗材管理</li><li>化粧品與耗材保存</li><li>操作前後工作台標準</li><li>異常事件、皮膚破損、感染疑慮處理流程</li></ul>
+    </div>
+  </details>
+
+  <details class="course" data-search="考核 認證 SOP 新人 評分">
+    <summary><div><strong>MODULE 12｜技術評核與內部認證</strong><br><small class="muted">上完課不等於會做</small></div><span class="badge blue">2H</span></summary>
+    <div class="courseBody">
+      <div class="tableWrap">
+        <table>
+          <thead><tr><th>評核</th><th>建議比重</th><th>判定</th></tr></thead>
+          <tbody>
+            <tr><td>專業知識</td><td>20%</td><td>基本原理、禁忌、轉介</td></tr>
+            <tr><td>SOP 正確性</td><td>25%</td><td>順序、時間、準備、收尾</td></tr>
+            <tr><td>美容技術</td><td>25%</td><td>手技、流暢度、操作品質</td></tr>
+            <tr><td>衛生安全</td><td>20%</td><td>清消、耗材、安全意識</td></tr>
+            <tr><td>顧客溝通</td><td>10%</td><td>說明、邊界、轉介與態度</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>建議制度：</strong>理論測驗 → 分段實作 → 完整真人流程 → 複訓。未通過者不獨立服務。</p>
+    </div>
+  </details>
+
+  <div class="card">
+    <h2>24H 核心班配置</h2>
+    <div class="hours">
+      <div class="hour"><b>2H</b>皮膚基礎</div>
+      <div class="hour"><b>4H</b>臉部保養</div>
+      <div class="hour"><b>4H</b>按摩</div>
+      <div class="hour"><b>3H</b>儀器導入</div>
+      <div class="hour"><b>4H</b>醫美知識</div>
+      <div class="hour"><b>2H</b>術前後照護</div>
+      <div class="hour"><b>2H</b>衛生安全</div>
+      <div class="hour"><b>1H</b>顧客溝通</div>
+      <div class="hour"><b>2H</b>考核</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="interview">
+  <div class="grid2">
+    <div class="card">
+      <h2>星期五開場建議</h2>
+      <div class="script">
+        <strong>30 秒版本</strong>
+        「我這次不是把臉部保養、皮秒、水光、音波各自拆成幾堂課而已。我想先建立一個教育訓練架構，把美容師可以實際操作的技術、需要理解的醫美知識，以及必須由醫療專業人員執行的內容分開。這樣新人比較容易學，公司也比較容易做 SOP、考核與品質管理。」
+      </div>
+      <div class="script" style="margin-top:12px">
+        <strong>如果對方問：妳會怎麼開始？</strong>
+        「我會先盤點公司現有療程、設備、產品、人員角色和目前 SOP，再做一版 24 小時新人核心訓練。先把最常用、風險最高、最需要一致化的流程做好，再延伸進階班與講師班。」
+      </div>
+    </div>
+
+    <div class="card checklist">
+      <h2>面試前檢查表</h2>
+      <label><input type="checkbox">記住 L1／L2／L3 三層邏輯</label>
+      <label><input type="checkbox">知道皮秒、音波、注射不能寫成自己的操作教學</label>
+      <label><input type="checkbox">把 MTS 定位成需要確認設備與侵入性的邊界項目</label>
+      <label><input type="checkbox">準備一段 30 秒課程理念</label>
+      <label><input type="checkbox">準備 24H 新人班配置</label>
+      <label><input type="checkbox">準備詢問公司實際設備與誰負責操作</label>
+      <label><input type="checkbox">確認 8 萬薪資是固定月薪還是含獎金／KPI</label>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h2>她一定要問公司的 10 個問題</h2>
+    <div class="tableWrap">
+      <table>
+        <thead><tr><th>#</th><th>問題</th><th>為什麼要問</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>美容講師實際受僱主體是診所、歐翠雅，還是其他公司？</td><td>確認勞動契約與責任主體</td></tr>
+          <tr><td>2</td><td>8萬元是固定月薪，還是包含業績／獎金後的預估？</td><td>避免薪資認知落差</td></tr>
+          <tr><td>3</td><td>美容講師有沒有個人銷售 KPI？</td><td>確認是教育職還是業務職</td></tr>
+          <tr><td>4</td><td>目前要訓練哪些對象？新人、美容師、諮詢師、店長還是加盟主？</td><td>決定教案層級</td></tr>
+          <tr><td>5</td><td>公司目前有沒有既有 SOP、教材、考核表？</td><td>判斷是優化還是從零建立</td></tr>
+          <tr><td>6</td><td>皮秒、水光、音波、MTS 各由哪些資格的人員實際操作？</td><td>確認職務法律邊界</td></tr>
+          <tr><td>7</td><td>MTS 實際使用哪一款設備？是否穿刺？是否 RF 微針？</td><td>「MTS」名稱不足以判斷權限</td></tr>
+          <tr><td>8</td><td>美容講師需要實際服務客人嗎？比例大約多少？</td><td>確認講師與美容師工作比例</td></tr>
+          <tr><td>9</td><td>是否需要跨店／跨縣市出差？頻率？</td><td>影響實際工時與成本</td></tr>
+          <tr><td>10</td><td>課程內容由誰核准？醫療療程教材是否由醫師審核？</td><td>這是成熟教育制度的重要訊號</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid3" style="margin-top:14px">
+    <div class="level"><span class="badge green">綠燈</span><h3>可以繼續談</h3><p>醫療操作清楚由醫師／合法醫事人員負責；講師主導美容技術與醫美協作教育；薪資與 KPI 清楚。</p></div>
+    <div class="level"><span class="badge amber">黃燈</span><h3>需要再確認</h3><p>對工作內容只說「進來再學」；誰操作設備說不清楚；薪資結構模糊；講師、業務、美容師三種角色混在一起。</p></div>
+    <div class="level"><span class="badge red">紅燈</span><h3>重新評估</h3><p>要求她實際施作或教授雷射、注射、醫療音波參數；要求用美容證照承擔醫療操作；拒絕說明雇主或薪資結構。</p></div>
+  </div>
+</section>
+
+<section class="section" id="law">
+  <div class="card">
+    <h2>截至 2026-09-01 的核心法規邊界</h2>
+    <p>這裡只放與她「美容講師」工作直接相關的判斷，不把法規堆成牆。</p>
+    <div class="grid2">
+      <div class="level">
+        <span class="badge red">醫療處置</span>
+        <h3>雷射、超音波、針劑</h3>
+        <p>2026 年修正後的「特定醫療技術檢查檢驗醫療儀器施行或使用管理辦法」把<strong>雷射、脈衝光、電波、超音波</strong>列為特定美容醫學光電處置，也把多種皮膚／皮下注射列為特定美容醫學處置。</p>
+      </div>
+      <div class="level">
+        <span class="badge amber">MTS／微針</span>
+        <h3>不能只看名稱判定</h3>
+        <p>MTS 可能涉及不同型態設備與侵入程度。面試大綱應寫成「原理與協作」，實際能否操作要依設備、是否穿刺／RF、核准用途及醫療法規確認。</p>
+      </div>
+      <div class="level">
+        <span class="badge blue">美容講師</span>
+        <h3>有乙級美容 ≠ 有醫療資格</h3>
+        <p>美容技術士證照能證明美容專業技能，但不會把醫療處置變成一般美容操作。工作角色應把美容技術與醫療處置明確分層。</p>
+      </div>
+      <div class="level">
+        <span class="badge blue">廣告與話術</span>
+        <h3>診所與個人工作室是不同場景</h3>
+        <p>《醫療法》第9條定義醫療廣告；第84條規定非醫療機構不得為醫療廣告；第87條把暗示或影射醫療業務的內容也納入。她若代表診所製作教育或行銷內容，仍應走診所內部審核機制。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h2>官方來源</h2>
+    <p class="source">1. 全國法規資料庫《醫療法》，修正日期 2026-05-15：<br><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020021" target="_blank" rel="noopener">https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020021</a></p>
+    <p class="source">2. 衛生福利部，2026 年修正《特定醫療技術檢查檢驗醫療儀器施行或使用管理辦法》：<br><a href="https://www.mohw.gov.tw/dl-98555-ce1b812f-52c5-4c3a-8bf2-0847a57505b0.html" target="_blank" rel="noopener">衛福部修正條文</a></p>
+    <p class="source">3. 衛生福利部對美容醫學的定義與類型說明：<br><a href="https://mohw.gov.tw/cp-16-23721-1.html" target="_blank" rel="noopener">衛福部美容醫學管理說明</a></p>
+    <div class="notice"><strong>用途提醒：</strong>這份頁面是面試課程架構與職務邊界整理，不是個別設備的法律鑑定。實際能否操作某台機器，仍須看產品許可、核准用途、操作人員資格及診所配置。</div>
+  </div>
+</section>
+
+<div class="footer">版本：2026-09-01｜用途：美容講師面試理解與課程架構準備｜靜態單檔，無外部程式依賴，可直接部署 GitHub Pages。</div>
+</div>
+
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll('.tab')];
+  const sections = [...document.querySelectorAll('.section')];
+
+  tabs.forEach(btn => btn.addEventListener('click', () => {
+    tabs.forEach(b => b.classList.remove('active'));
+    sections.forEach(s => s.classList.remove('active'));
+    btn.classList.add('active');
+    const target = document.getElementById(btn.dataset.tab);
+    if(target) target.classList.add('active');
+    window.scrollTo({top: document.querySelector('.toolbar').offsetTop - 10, behavior:'smooth'});
+  }));
+
+  document.getElementById('printBtn').addEventListener('click', () => window.print());
+
+  const modules = {
+    facial:{
+      level:'L1｜美容實作', cls:'green', title:'臉部保養',
+      summary:'可完整教授標準美容服務流程，核心是清潔、保養、服務品質、衛生與居家建議。',
+      can:['卸妝／清潔／基礎保養 SOP','美容膚況觀察','面膜、保濕、防護流程','產品使用順序與服務紀錄','真人實作與技術考核'],
+      no:['疾病診斷','宣稱治療皮膚疾病','把一般美容結果保證化'],
+      course:'臉部保養標準流程與服務品質'
+    },
+    massage:{
+      level:'L1｜美容實作', cls:'green', title:'臉部／頸肩按摩',
+      summary:'可做完整手技教學，以手法、節奏、力道、舒適度及操作者人體工學為核心。',
+      can:['手勢與方向','力道與節奏','流程銜接','頸肩放鬆','真人實作與評核'],
+      no:['宣稱治療疾病','把美容按摩包裝成醫療處置'],
+      course:'臉部與頸肩美容按摩技術'
+    },
+    device:{
+      level:'L1｜設備判定', cls:'amber', title:'美容儀器導入',
+      summary:'可教一般美容設備，但必須先確認實際機型、是否屬醫療器材、核准用途及操作資格。',
+      can:['基本原理','操作前確認','合法用途下的標準流程','設備清潔消毒','耗材與點檢'],
+      no:['看到「美容儀」名稱就推定可操作','超出原廠／核准用途使用','自行把醫療設備降格成美容設備'],
+      course:'美容儀器安全、導入原理與標準流程'
+    },
+    mts:{
+      level:'L2｜醫美協作', cls:'amber', title:'MTS／微針',
+      summary:'建議先做知識與協作課。MTS 名稱涵蓋範圍太廣，實際權限必須依設備與侵入程度逐一判定。',
+      can:['基本原理與名詞','顧客療程流程','衛生與感染風險','術前後一般美容照護','異常轉介'],
+      no:['概括宣稱美容師都能操作','自行教授穿刺深度','RF 能量等醫療參數','未確認設備就安排真人操作'],
+      course:'MTS／微針原理、風險與美容醫學協作'
+    },
+    pico:{
+      level:'L2 → L3｜醫療光電', cls:'red', title:'皮秒雷射',
+      summary:'美容講師可教療程知識、顧客流程及術後照護；雷射參數、醫療判斷與實際施打留給醫療端。',
+      can:['皮秒／雷射基礎概念','顧客流程','術前注意事項','術後清潔、保濕、防曬','異常反應轉介'],
+      no:['波長／能量／發數設定','治療深度與區域醫療判斷','實際雷射施打','併發症診治'],
+      course:'皮秒雷射基礎知識與術前後美容照護'
+    },
+    skinbooster:{
+      level:'L2 → L3｜針劑醫療', cls:'red', title:'水光針',
+      summary:'若療程涉及皮內或皮下注射，實際注射屬醫療處置。美容端適合負責知識、服務流程與術後美容照護。',
+      can:['療程概論','顧客流程','術前一般準備','術後保濕／防曬','追蹤與異常回報'],
+      no:['注射點位','注射深度','劑量或藥品搭配','實際注射','醫療風險處置'],
+      course:'水光療程基礎知識與美容協作'
+    },
+    hifu:{
+      level:'L2 → L3｜醫療光電', cls:'red', title:'音波拉提',
+      summary:'超音波屬特定美容醫學光電處置。美容講師可教原理與顧客旅程，不負責醫療參數與實際治療。',
+      can:['HIFU 基礎原理','顧客療程流程','術前後一般美容照護','顧客追蹤','異常轉介'],
+      no:['探頭深度選擇','能量設定','發數／區域醫療規劃','實際音波治療'],
+      course:'音波拉提基礎知識與美容醫學協作'
+    },
+    aftercare:{
+      level:'L2｜美容醫學協作', cls:'green', title:'術前後美容照護',
+      summary:'最適合美容講師做成標準化系統的區域：把醫療療程前後的美容照護、追蹤與轉介做成一致 SOP。',
+      can:['清潔／保濕／防曬照護','產品使用原則','追蹤紀錄','顧客衛教','異常停止服務並轉醫療端'],
+      no:['自行診斷併發症','自行治療醫療問題','以美容端取代醫師回診'],
+      course:'美容醫學術前後照護與顧客追蹤 SOP'
+    }
+  };
+
+  const detailLevel = document.getElementById('detailLevel');
+  const detailTitle = document.getElementById('detailTitle');
+  const detailSummary = document.getElementById('detailSummary');
+  const detailCan = document.getElementById('detailCan');
+  const detailNo = document.getElementById('detailNo');
+  const detailCourse = document.getElementById('detailCourse');
+
+  function renderModule(key){
+    const d = modules[key];
+    if(!d) return;
+    detailLevel.className = 'badge ' + d.cls;
+    detailLevel.textContent = d.level;
+    detailTitle.textContent = d.title;
+    detailSummary.textContent = d.summary;
+    detailCan.innerHTML = d.can.map(x => '<li>✓ '+x+'</li>').join('');
+    detailNo.innerHTML = d.no.map(x => '<li>× '+x+'</li>').join('');
+    detailCourse.textContent = d.course;
+  }
+
+  document.querySelectorAll('.module-btn').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.module-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderModule(btn.dataset.module);
+  }));
+  renderModule('facial');
+
+  const search = document.getElementById('courseSearch');
+  search.addEventListener('input', () => {
+    const q = search.value.trim().toLowerCase();
+    document.querySelectorAll('.course').forEach(item => {
+      const hay = (item.dataset.search + ' ' + item.textContent).toLowerCase();
+      item.classList.toggle('hide', q && !hay.includes(q));
+    });
+  });
+})();
+</script>
+</body>
+</html>
